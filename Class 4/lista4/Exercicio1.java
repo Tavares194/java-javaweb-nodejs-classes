@@ -1,28 +1,70 @@
 package lista4;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Exercicio1 {
-    //Essa classe consiste exclusivamente em métodos estáticos que operam ou retornam coleções.
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        ArrayList<Integer> lista = new ArrayList<Integer>();
-        
-        System.out.println("Digite um número: ");
-        lista.add(scan.nextInt());
 
-        System.out.println("Digite outro número: ");
-        lista.add(scan.nextInt());
+	public static void main(String[] args) {
+		
+		// A classe java.util.Collections é uma classe utilitária introduzida no Java 1.2 
+		// que fornece métodos estáticos para auxiliar na manipulação de objetos armazenados 
+		// em coleções Java.
+		
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+		
+		Random random = new Random();
+		
+		do {
+			lista.add( random.nextInt(1, 10));
+		}
+		while( lista.size() < 5 );
+			
+		// min: retorna o menor valor do vetor
+		System.out.println("Menor valor: " + Collections.min(lista) );
+		
+		// max: seleciona o maior valor do vetor 
+		System.out.println("Maior valor: " + Collections.max(lista) );
+		
+		for( Integer i: lista )
+			System.out.println( i );
+		
+		System.out.println("-------------------------" );
+		
+		// reverseOrder: coloca os elementos em ordem inversa;
+		
+		Collections.sort( lista, Collections.reverseOrder() );
+		
+		for( Integer i: lista )
+			System.out.println( i );
+		
+		System.out.println("-------------------------" );
+		
+		// sort: ordena elementos no vetor;
+		
+		Collections.sort( lista );
+		
+		for( Integer i: lista )
+			System.out.println( i );
+		
+		System.out.println("-------------------------" );
+		
+		ArrayList<Integer> lista2 = new ArrayList<Integer>();
+		
+		lista2.add(500);
+		lista2.add(500);
+		
+		// copy: copia os elementos de um vetor para outro vetor;
+		// verifique que os elementos são sobrepostos.
+		
+		Collections.copy( lista, lista2 );
+		
+		for( Integer i: lista )
+			System.out.println( i );
+		
+		
+		
+	}
 
-        System.out.println("Digite mais um número: ");
-        lista.add(scan.nextInt());
-
-        Collections.sort(lista);
-        System.out.println("\nLista ordenada: ");
-
-        for(Integer x : lista)
-        System.out.println(x);
-    }
 }
