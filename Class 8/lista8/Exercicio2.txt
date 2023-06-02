@@ -1,0 +1,11 @@
+2 – Quais são os principais métodos das classes abstratas Reader e Writer.
+Descreva como funcionam os métodos.
+
+Os principal método do Reader é o read(), e o principal método do Write é o write().
+
+Para utilizar o read(), o desenvolvedor precisa utilizar de um laço while para poder ler o arquivos sem problemas, 
+onde esse laço é construído da seguinte forma: "while((c = in.read()) != -1)" e dentro do mesmo estaria as instruções 
+referentes ao próprio arquivo para leitura. 
+
+Já o método write() é bem simples de ser utilizado, ele procede o nome do objeto utilizado para fazer a criação e escrita 
+do arquivo e dentro de seus parênteses estão as instruções de escrita, como por exemplo: out.write("ABC");
