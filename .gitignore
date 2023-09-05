@@ -1,5 +1,14 @@
+# Apache
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
 # Compiled class file
 *.class
+
+# Node files
+node_modules
 
 # Log file
 *.log
